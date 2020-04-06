@@ -1,0 +1,4 @@
+peanut butter=flour:1 cup,sugar:2 cup,peanut butter:2 cup,cinnamon:1 cup,butter:2 tsp
+chocolate chip=chips:1 cup,sugar:1 cup,butter:2 tsp
+chococlate cheese=flour:1 cup,sugar:2 cup,cinnamon:2 cup,butter:1 tblsp
+chocolate butter=gluten free flour:1 cup,flavour adders:1 cup,butter:2 tsp
