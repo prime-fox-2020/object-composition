@@ -46,6 +46,13 @@ class RedVelvet extends Cookie{
     }
 }
 
+class OtherCookie extends Cookie{
+    constructor(name, ingredients){
+        super(name, ingredients)
+        this.other_count = 150
+    }
+}
+
 class Ingredient{
     constructor(options){
         this.name = options['name']
@@ -74,14 +81,7 @@ class CookieFactory{
                 case 'chocolate chip crumbled' : arrayOfCookies.push(new ChocolateChipCrumbled(getIngredients)); break
                 case 'peanut butter crumbled' : arrayOfCookies.push(new PeanutButterCrumbled(getIngredients)); break
                 case 'red velvet' : arrayOfCookies.push(new RedVelvet(getIngredients)); break
-                default : 
-                    class OtherCookie extends Cookie{
-                        constructor(){
-                            super(getCookieName, getIngredients)
-                            this.other_count = 150
-                        }
-                    }
-                    arrayOfCookies.push(new OtherCookie()); break
+                default : arrayOfCookies.push(new OtherCookie(getCookieName, getIngredients)); break
             }
         }
         return arrayOfCookies
