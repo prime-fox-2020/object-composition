@@ -1,0 +1,7 @@
+peanut butter = 1 cup : flour, 2 cup (glutten) : sugar, 2 cups : peanut butter, 1 cup : cinnamon, 2 tsp : butter
+chocolate chip = 1 cup : chips, 1 cup : sugar, 2 tsp : butter
+peanut butter crumbled = 1 cup : flour, 2 cup (glutten) : sugar, 2 cups : peanut butter, 1 cup : cinnamon, 2 tsp : butter, 1 box : cereal
+chocolate chip crumbled = 1 cup : chips, 1 cup : sugar, 2 tsp : butter, 1 box : cereal
+red velvet = 1 cup : flour, 2 cup : mild cocoa flavor, 2 cup : tangy buttermilk, 1 cup : sweet vanilla, 1 cup : very buttery 
+chocolate cheese = 1 cup : flour, 2 cups : sugar, 2 cups : cinnamon, 1 tblsp : butter
+chocolate butter = 1 cup : glutten free flour, 1 cup : flavor adders, 2 tsp : butter
