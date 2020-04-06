@@ -109,7 +109,7 @@ class CookieFactory {
         for (let i = 0; i < arrOfObj.length; i++) {
             let bolehkah = true
             for (let j = 0; j < arrOfObj[i].ingredients.length; j++) {
-                if (arrOfObj[i].ingredients[j].name == 'sugar') {
+                if (arrOfObj[i].ingredients[j].name == 'sugar' && arrOfObj[i].ingredients[j].name !== 'sugar free') {
                     bolehkah = false
                 }
             }
