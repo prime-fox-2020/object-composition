@@ -1,0 +1,4 @@
+peanut butter=flour:1,sugar:2,peanut butter:2,cinnamon:1,butter:1
+chocolate chip=chips:1,sugar:1,butter:2
+chocolate cheese=flour:1,sugar:2,cinnamon:2,butter:3
+chocolate butter=glutten free flour:1,flavor adders:1,butter:2
