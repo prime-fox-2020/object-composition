@@ -1,0 +1,4 @@
+peanut butter=5
+chocolate chip=5
+chocolate cheese=0
+chocolate butter=4
