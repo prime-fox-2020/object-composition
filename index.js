@@ -7,7 +7,6 @@ class Ingredient {
     constructor(options){
         this.name = options[0]
         this.amount = options[1]
-
     }
 
     static parseIngredient(list){ //['peanut butter', [[flour, 1],[sugar, 1],[peanut, 1],[cinnamon, 1],[butter, 1]]]
@@ -85,8 +84,26 @@ class CookieFactory {
             }
         }
     }
+
+    static withNoSugar(){
+        for(let a = 0; a < cookieList.length; a++){
+            let flag = false
+            for(let b = 0; b < cookieList[a].ingredients.length; b++){
+                if(cookieList[a].ingredients[b].name === 'sugar'){
+                    flag = true
+                    break
+                }
+            }
+            if(flag === true){
+                continue;
+            } else {
+                console.log(cookieList[a])
+            }
+        }
+    }
 }
 
 Ingredient.parseIngredient(list);
 CookieFactory.create(parsedList)
 console.log(cookieList);
+CookieFactory.withNoSugar();
