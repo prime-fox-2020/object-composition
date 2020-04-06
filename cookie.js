@@ -1,8 +1,9 @@
 class Cookie {
-  constructor(name) {
+  constructor(name, ingredients = []) {
     this._name = name
     this._status = 'mentah'
-    this._ingredients = []
+    this._ingredients = ingredients
+    this._hasSugar = ingredients.some(el => el._name === 'sugar')
   }
 
   bake() {
