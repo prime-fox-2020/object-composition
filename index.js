@@ -12,7 +12,7 @@ class Cookie {
         this.name = name
         this.status = "mentah"
         this.ingredients = this.getRecipe(ingredients)
-        this.has_sugar = null
+        this.has_sugar = this.checkSugar()
     }
     getRecipe(ingredients) {
         let arr = []
@@ -21,10 +21,12 @@ class Cookie {
         }
         return arr
     }
-
-    // get status(){
-    // return this.status
-    // }
+    checkSugar(){
+        for(let i=0;i<this.ingredients.length;i++){
+            if(this.ingredients[i].name=="sugar") return true
+        }
+        return !true
+    }
     bake() {
         this.status = "selesai dimasak"
     }
@@ -77,7 +79,6 @@ class CookieFactory {
         // Tambahin othercookie
         let cookiesType = []
         let cookieResep = this.getIngredients()
-        // console.log(cookieResep)
         for (let i = 0; i < cookies.length; i++) {
             switch (cookies[i]) {
                 case 'peanut butter':
@@ -113,7 +114,7 @@ class CookieFactory {
         for (let i = 0; i < options_ingredients.length; i++) {
             x = []
             x = options_ingredients[i].split(' = ')
-            ingredients_amount.push(x[1].split(','))
+            ingredients_amount.push(x[1].split(', '))
         }
         //Pecah per amount
         let ingredients_amount_details = [], temp = [], temp1 = [], obj = {}
@@ -141,35 +142,25 @@ class CookieFactory {
         }
         return ingredients_array_1
     }
-    static cookieRecommendations(string,x){
+    static cookieRecommendations(days,batch_of_cookies){
         let lessSugar=[]
-        let cookieLessSugar = x,check=false
-        for(let i=0;i<cookieLessSugar.length;i++){
-            check=false
-            let temp=[]
-            temp=cookieLessSugar[i]['ingredients']
-
-            for(let j=0;j<temp.length;j++){
-                if(temp['name']=='sugar'){
-                    check=true
-                    break
-                }
+        let sugary = []
+        for(let i=0;i<batch_of_cookies.length;i++){
+            if(batch_of_cookies[i].has_sugar==false){
+                lessSugar.push(batch_of_cookies[i]['name'])
             }
-            if(check==false){
-                lessSugar.push(cookieLessSugar[i]['name'])
+            else{
+                sugary.push(batch_of_cookies[i]["name"])
             }
         }
 
-        // console.log(cookieLessSugar)
         return lessSugar
     }
 }
 
 let batch_of_cookies = CookieFactory.create(options)
-console.log(batch_of_cookies)
+console.table(batch_of_cookies)
 let sugarFreeFoods = CookieFactory.cookieRecommendations("Tuesdays", batch_of_cookies)
 
 console.log("Sugar free cakes are : ", sugarFreeFoods)
-    
-
 // const pb = CookieFactory.create('peanut_butter') // PeanutButter
