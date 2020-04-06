@@ -1,0 +1,70 @@
+{
+    "peanut butter": [
+        {
+            "name": "flour",
+            "amount": "1 cup"
+        },
+        {
+            "name": "sugar",
+            "amount": "2 cup (gluten)"
+        },
+        {
+            "name": "peanut",
+            "amount": "2 cup"
+        },
+        {
+            "name": "cinnamon",
+            "amount": "1 cup"
+        },
+        {
+            "name": "butter",
+            "amount": "2 tsp"
+        }
+    ],
+    "chocolate chip": [
+        {
+            "name": "chips",
+            "amount": "1 cup"
+        },
+        {
+            "name": "sugar",
+            "amount": "1 cup"
+        },
+        {
+            "name": "butter",
+            "amount": "2 tsp"
+        }
+    ],
+    "chocolate cheese": [
+        {
+            "name": "flour",
+            "amount": "1 cup"
+        },
+        {
+            "name": "sugar",
+            "amount": "2 cup"
+        },
+        {
+            "name": "cinnamon",
+            "amount": "2 tsp"
+        },
+        {
+            "name": "butter",
+            "amount": "2 tblsp"
+        }
+    ],
+    "chocolate butter": [
+        {
+            "name": "gluten free flour",
+            "amount": "1 cup"
+        },
+        {
+            "name": "flavor adders",
+            "amount": "2 cup"
+        },
+        {
+            "name": "butter",
+            "amount": "2 tsp"
+        }
+    ]
+}
