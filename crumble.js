@@ -50,6 +50,20 @@ class ChocholateButter extends Cookie {
         this.choc_but_count = 400
     }
 }
+
+class ChocolateChipCrumbled extends ChocholateChip{
+    constructor(name, ingredients) {
+        super(name, ingredients)
+        //this.form = 'crumbled'
+    }
+}
+
+class PeanutButterCrumbled extends PeanutButter{
+    constructor(name, ingredients){
+        super(name, ingredients)
+        this.form = 'crumbled'
+    }
+}
 class CookieFactory{
     static create(cookies) {
         let myCookiesList = []
@@ -57,6 +71,8 @@ class CookieFactory{
             myCookiesList.push(new ChocholateChip (cookies[1]))
             myCookiesList.push(new ChocholateCheese (cookies[2]))
             myCookiesList.push(new ChocholateButter (cookies[3]))
+            myCookiesList.push(new ChocolateChipCrumbled(cookies[4]))
+            myCookiesList.push(new PeanutButterCrumbled (cookies[5]))
 
         return myCookiesList
     }
@@ -113,6 +129,11 @@ for(let i = 0; i < splitCommaIngre.length; i++){
         splitIngre.push(splitCommaIngre[i][j].split(':'))
     }
 }
+
+let chocorumbled = CookieFactory.create('chocolate chip crumbled', 500);
+let peanutCrumbled = CookieFactory.create('peanut butter crumbled', 600);
+console.log(chocorumbled);
+console.log(peanutCrumbled);
 
 let sugarFreeFoods = CookieFactory.cookieRecommendation('tuesday',batch_of_cookies)
 console.log("sugar free cakes are :")
