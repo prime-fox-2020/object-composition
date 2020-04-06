@@ -16,10 +16,6 @@ class Cookie{
     get status(){return this._status}
     set status(p){this._status=p}
 
-    bake(){
-        this.status = 'selesai dimasak'
-    }
-
     breakdownIngredients(ingredients){
         let arrOfIngredients = []
         for(let i = 0; i < ingredients.length; i++){
@@ -52,7 +48,6 @@ class OtherCookie extends Cookie {
         super(name, ingredients)
         this.other_count = 150
     }
-    
 }
 
 
